@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+:root {
+    --cor1: black;
+    --cor2: #4F4F4F;
+    --cor3: #ABABAB;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    margin: 0;
+    color: white;
+    background-image: url(../Imagens/FundoBlack.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.titulo>h1>a {
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+}
+
+.titulo>p>a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.titles h1 {
+    font-family: "Aboreto", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.caixa_content {
+    display: flex;
+    align-self: left;
+    padding: 70px;
+    width: 100%;
+}
+
+.conteudo {
+    flex-grow: 0.4;
+}
+
+.projetos {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
+}
+
+.projeto-item {
+    margin: 20px;
+}
+
+.projeto-item a {
+    text-decoration: none;
+    color: white;
+}
+
+.projeto-item img {
+    width: 370px;
+    height: 350px;
+    padding-top: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}

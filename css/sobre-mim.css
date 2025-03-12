@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+:root {
+    --cor1: black;
+    --cor2: #4F4F4F;
+    --cor3: #ABABAB;
+}
+
+body {
+    font-family: 'Aboreto' sans-serif;
+    color: white;
+    background-image: url(../Imagens/FundoBlack.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.titulo>h1>a {
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+}
+
+.titulo>p>a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.titles h1 {
+    font-family: "Aboreto", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
+    width: 70%;
+    padding: 20px;
+}
+
+.caixa_content {
+    display: flex;
+    align-self: flex-start;
+    padding: 40px;
+    width: 100%;
+}
+
+.conteudo {
+    flex-grow: 1;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content>img {
+    height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 70px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    background: rgb(0, 0, 0, 0.5);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.about i {
+    font-size: 30px;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.about i:hover {
+    color: #007bff;
+}
+
+.social-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.social-link i {
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.social-link:hover {
+    color: #007bff;
+}
+
+.social-link:hover i {
+    color: #007bff;
+}
+
+.social-link-inst {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.social-link-inst i {
+    font-size: 24px;
+    margin-right: 8px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.social-link-inst:hover {
+    color: transparent;
+}
+
+.social-link-inst:hover i {
+    color: transparent;
+}
+
+.social-link-inst:hover span,
+.social-link-inst:hover i {
+    background: linear-gradient(#f9ce34, #ee2a7b, #6228d7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 0.3s ease;
+    text-fill-color: transparent;
+}
+
+.social-link-what {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.social-link-what i {
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.social-link-what:hover {
+    color: greenyellow;
+}
+
+.social-link-what:hover i {
+    color: greenyellow;
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.filter-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.filter-button:hover {
+    background-color: #2980b9;
+}
+
+.filter-button.active {
+    background-color: #1c608d; /* Cor de fundo mais escura para o botão ativo */
+}
+
+.bottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content>img {
+        width: 250px;
+        height: 350px;
+        margin-bottom: 20px;
+    }
+
+    .caixa_content {
+        padding: 20px;
+    }
+
+    .titles h1 {
+        font-size: 40px;
+    }
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projetos>
+    <projeto id="lovely-sarai">
+        <nome>Lovely Sarai</nome>
+        <imagem>Imagens/Lovely Sarai.png</imagem>
+        <descricao>Website para uma joalharia.</descricao>
+        <data_inicio>02/10/2023</data_inicio>
+        <data_conclusao>23/10/2023</data_conclusao>
+        <tecnologias_utilizadas>WordPress, HTML, CSS</tecnologias_utilizadas>
+        <descricao_all>O Lovely Sarai é um projeto de joalharia que abrange todas as etapas do desenvolvimento e comercialização de peças exclusivas. A execução envolve pesquisa de tendências, design de joias, seleção de materiais de alta qualidade e processos de manufatura artesanal ou industrial. Além disso, o projeto conta com estratégias de marketing digital e e-commerce para ampliar a visibilidade da marca e a experiência do cliente, garantindo um posicionamento sólido no mercado.</descricao_all>
+    </projeto>
+    <projeto id="oficina-crista">
+        <nome>Oficina Cristã</nome>
+        <imagem>Imagens/OficinaCrista.png</imagem>
+        <descricao>Website para uma igreja evangélica.</descricao>
+        <data_inicio>19/09/2023</data_inicio>
+        <data_conclusao>30/09/2023</data_conclusao>
+        <tecnologias_utilizadas>WordPress, HTML, CSS</tecnologias_utilizadas>
+        <descricao_all>O projeto Oficina Cristã consiste no desenvolvimento de uma plataforma estruturada para a edificação e fortalecimento da igreja evangélica protestante. A execução envolve a criação de materiais didáticos, organização de eventos presenciais e online, além da implementação de programas de discipulado e assistência social. A gestão do projeto contempla a definição de metas, planejamento estratégico e utilização de ferramentas tecnológicas para otimizar a comunicação e engajamento da comunidade cristã.</descricao_all>
+    </projeto>
+    <projeto id="prosite-innovations">
+        <nome>ProSite Innovations</nome>
+        <imagem>Imagens/innovationPic.jpg</imagem>
+        <descricao>Website para uma empresa de desenvovimento de software.</descricao>
+        <data_inicio>13/06/2024</data_inicio>
+        <data_conclusao>06/07/2024</data_conclusao>
+        <tecnologias_utilizadas>WordPress, HTML, CSS</tecnologias_utilizadas>
+        <descricao_all>A ProSite Innovations é um projeto empresarial voltado para o desenvolvimento de software e estratégias de marketing digital. A sua execução inclui a definição de metodologias ágeis, levantamento de requisitos junto aos clientes, desenvolvimento de soluções tecnológicas personalizadas e implementação de campanhas digitais eficazes. O gerenciamento de projetos segue padrões de qualidade e inovação, garantindo entregas eficientes e alinhadas às necessidades do mercado.</descricao_all>
+    </projeto>
+    <projeto id="web-browser">
+        <nome>Web Browser</nome>
+        <imagem>Imagens/Browser.png</imagem>
+        <descricao>Aplicação em WPF, C# para navegação web.</descricao>
+        <data_inicio>10/01/2025</data_inicio>
+        <data_conclusao>07/02/2025</data_conclusao>
+        <tecnologias_utilizadas>Visual Studio 2022, XAML, C#</tecnologias_utilizadas>
+        <descricao_all>O projeto Web Browser envolve a criação e otimização de um navegador web voltado para desempenho, segurança e experiência do usuário. A execução abrange a definição de arquitetura de software, desenvolvimento de funcionalidades avançadas, implementação de protocolos de segurança e testes rigorosos para garantir estabilidade e eficiência. Além disso, há um foco contínuo na experiência do usuário, com aprimoramentos na interface e compatibilidade com diferentes plataformas.</descricao_all>
+    </projeto>
+    <projeto id="companhia-da-mariposa">
+        <nome>Companhia Da Mariposa</nome>
+        <imagem>Imagens/CDM.png</imagem>
+        <descricao>Website para uma empresa de organização de eventos.</descricao>
+        <data_inicio>05/12/2024</data_inicio>
+        <data_conclusao>15/04/2025</data_conclusao>
+        <tecnologias_utilizadas>HTM, CSS, PHP, JavaScript, Ajax, SQL</tecnologias_utilizadas>
+        <descricao_all>A Companhia da Mariposa é um projeto de website para uma empresa de planejamento de eventos. A execução envolve a criação de uma plataforma intuitiva e funcional, que permite aos clientes acessarem serviços, agendamentos e inspirações para seus eventos. O desenvolvimento inclui a implementação de design responsivo, otimização para SEO, integração com ferramentas de gestão de clientes e marketing digital para aumentar a visibilidade e conversão de leads.</descricao_all>
+    </projeto>
+</projetos>

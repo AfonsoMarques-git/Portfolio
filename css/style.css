@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+:root {
+    --cor1: black;
+    --cor2: #4F4F4F;
+    --cor3: #ABABAB;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    color: white;
+    background-image: url(../Imagens/FundoBlack.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.aboreto {
+    font-family: "Aboreto", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.main-content>.caixa_content>h1 {
+    font-size: 120px;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.caixa_content {
+    align-self: center;
+    width: 50%;
+}
+
+.conteudo {
+    width: 70%;
+}
+
+.projetos {
+    text-align: right;
+    padding-top: 20px;
+}
+
+.projetos>a {
+    text-decoration: none;
+    color: white;
+}

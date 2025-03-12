@@ -1,0 +1,184 @@
+/* projeto-individual.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    /* Adicionado para manter a cor do texto branco */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+:root {
+    --cor1: black;
+    --cor2: #4F4F4F;
+    --cor3: #ABABAB;
+    --cor4: #FFFFFF;
+}
+
+body {
+    background-image: url(../Imagens/FundoBlack.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    /* Evita a barra de rolagem do body */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    margin: 0;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.caixa_content {
+    display: flex;
+    align-self: left;
+    padding: 70px;
+    width: 100%;
+}
+
+.conteudo {
+    flex-grow: 0.4;
+    width: 100%;
+}
+
+.titles {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.voltar-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+.voltar-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.titles h1 {
+    font-family: "Aboreto", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+    margin: 0;
+}
+
+.titles p {
+    font-size: 18px;
+    color: var(--cor3);
+    margin: 10px 0;
+}
+
+.projeto-individual {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5%;
+    text-align: center;
+    width: 100%;
+}
+
+.projeto-header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.projeto-info {
+    flex: 1;
+}
+
+.projeto-info-header{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 5%;
+}
+
+.projeto-individual img {
+    height: 500px;
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.information {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.descricao {
+    font-size: 2em;
+    color: var(--cor3);
+    margin: 10px 0;
+}
+
+.descricao-all {
+    font-size: 1.2em;
+    color: var(--cor4);
+    margin-left: 5%;
+    text-align: justify;
+    line-height: 1.5;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.data {
+    font-size: 1.2em;
+    color: var(--cor3);
+    margin: 10px 0;
+    text-align: left;
+    margin-left: 5%;
+}
+
+.aboreto{
+    font-size: 3em;
+}
+
+@media (max-width: 768px) {
+    .caixa_content {
+        padding: 30px;
+    }
+
+    .titles h1 {
+        font-size: 40px;
+    }
+
+    .titles p {
+        font-size: 16px;
+    }
+
+    .projeto-individual img {
+        max-width: 90%;
+    }
+
+    .titles {
+        width: 95%;
+    }
+}

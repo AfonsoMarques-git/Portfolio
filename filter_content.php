@@ -1,0 +1,9 @@
+<?php
+$state = $_GET['state'];
+
+if ($state === 'profissional') {
+    echo "Olá, chamo-me Afonso Marques, sou um estudante dedicado de Gestão e Programação de Sistemas Informáticos, com um forte interesse no desenvolvimento Front-End. A minha paixão pela tecnologia e o desejo de criar experiências digitais intuitivas e apelativas impulsionam-me a explorar constantemente novas linguagens e ferramentas.<br /><br /> A minha formação académica sólida, aliada à minha proatividade e sede de conhecimento, fazem de mim um profissional promissor na área da informática.<br /><br /> Estou sempre à procura de novos desafios e oportunidades para aplicar os meus conhecimentos e contribuir para projetos inovadores. Acredito que a minha capacidade de trabalhar em equipa, aliada à minha resiliência e foco, me tornam um profissional valioso para qualquer equipa.";
+} else {
+    echo "Olá, o meu nome é Afonso Marques e sou um apaixonado por desafios. A minha vida divide-se entre o mundo digital e o desporto. Como estudante de Gestão e Programação de Sistemas Informáticos, encontro no desenvolvimento web, em particular no Front-End, um espaço onde posso dar asas à minha criatividade e aplicar as minhas competências técnicas.<br /><br /> Nos tempos livres, o meu espírito competitivo e a busca por equilíbrio levam-me a praticar diversos desportos, como musculação, futebol, basquetebol e voleibol. Estas atividades não só fortalecem o meu corpo, como também moldam o meu carácter, incutindo-me qualidades como foco, disciplina, espírito de equipa e resiliência.<br /><br /> Acredito no poder do aprendizado contínuo e encaro cada novo desafio como uma oportunidade de crescimento pessoal e profissional.";
+}
+?>
