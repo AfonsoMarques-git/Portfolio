@@ -1,0 +1,25 @@
+{
+    "logo": {
+        "src": "./images/logos/logo.png",
+        "alt": "Logo",
+        "link": "./index.html"
+    },
+    "navigation": [
+        {
+            "label": "Home",
+            "link": "./index.html"
+        },
+        {
+            "label": "About",
+            "link": "./pages/about.html"
+        },
+        {
+            "label": "Contact",
+            "link": "./pages/contact.html"
+        },
+        {
+            "label": "Portfolio",
+            "link": "./pages/portfolio.html"
+        }
+    ]
+}

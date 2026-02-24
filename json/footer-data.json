@@ -1,0 +1,21 @@
+{
+    "logo": {
+        "src": "./images/logos/logo.png",
+        "alt": "Logo"
+    },
+    "socialMedia": [
+        {
+            "platform": "instagram",
+            "url": "https://instagram.com/afonso_lm2"
+        },
+        {
+            "platform": "whatsapp",
+            "url": "https://wa.me/351910604498"
+        }
+    ],
+    "copyright": "&copy; 2026 Afonso Marques. All rights reserved.",
+    "backToTop": {
+        "alt": "Back to Top",
+        "anchor": "#top"
+    }
+}
