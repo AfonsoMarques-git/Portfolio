@@ -1,95 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="hero-section">
+    <h1 class="hero-section-title">If You Like</h1>
+    <h1 class="hero-section-title">
+        My Work
+        <span class="hero-section-icon">
+            <img src="./images/icons/triangle-icon-2.svg" alt="">
+        </span>
+    </h1>
+    <h1 class="hero-section-title">
+        Get In touch
+        <span class="hero-section-icon">
+            <img src="./images/icons/triangle-icon-2.svg" alt="">
+        </span>
+    </h1>
+</div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Afonso Marques</title>
-    <link rel="shortcut icon" href="../images/logos/favicon.png" type="image/x-icon">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/contact.css">
-</head>
-
-<body id="top">
-    <header>
-    </header>
-
-    <hr>
-
-    <div class="main-container">
-        <div class="hero-section">
-            <h1 class="hero-section-title">If You Like</h1>
-            <h1 class="hero-section-title">
-                My Work
-                <span class="hero-section-icon" id="contact-triangle-icon-1"></span>
-            </h1>
-            <h1 class="hero-section-title">
-                Get In touch
-                <span class="hero-section-icon" id="contact-triangle-icon-2"></span>
-            </h1>
+<div class="contact-section">
+    <form action="https://api.web3forms.com/submit" method="post" class="contact-form">
+        <input type="hidden" name="access_key" value="4bdf5561-95ef-4019-9ebd-61b36591de2d">
+        <div class="contact-form-row">
+            <div class="contact-form-field">
+                <input type="text" id="name" name="name" placeholder=" " required>
+                <label for="name">Name</label>
+            </div>
+            <div class="contact-form-field">
+                <input type="email" id="email" name="email" placeholder=" " required>
+                <label for="email">Email</label>
+            </div>
         </div>
-
-        <div class="contact-section">
-            <form action="https://api.web3forms.com/submit" method="post" class="contact-form">
-                <input type="hidden" name="access_key" value="4bdf5561-95ef-4019-9ebd-61b36591de2d">
-                <div class="contact-form-row">
-                    <div class="contact-form-field">
-                        <input type="text" id="name" name="name" placeholder=" " required>
-                        <label for="name">Name</label>
-                    </div>
-                    <div class="contact-form-field">
-                        <input type="email" id="email" name="email" placeholder=" " required>
-                        <label for="email">Email</label>
-                    </div>
-                </div>
-                <div class="contact-form-row">
-                    <div class="contact-form-field">
-                        <input type="text" id="subject" name="subject" placeholder=" " required>
-                        <label for="subject">Subject</label>
-                    </div>
-                    <div class="contact-form-field">
-                        <textarea id="message" name="message" rows="1" placeholder=" " required></textarea>
-                        <label for="message">Message</label>
-                    </div>
-                </div>
-                <div class="contact-form-row">
-                    <button type="submit" class="contact-form-button">
-                        <div class="svg-wrapper-1">
-                            <div class="svg-wrapper">
-                                <svg xmlns="http://www.w3.org/2000/svg" style="stroke:transparent;"
-                                    viewBox="0 0 113 85.15" fill="currentColor" weight="black">
-                                    <polygon transform="rotate(180 56.5 42.575)"
-                                        points="113 41.71 58.39 80.32 58.39 0 55.39 0 55.39 80.31 0 41.14 0 44.81 55.38 84 56.85 85.15 58.39 84 113 45.38 113 41.71">
-                                    </polygon>
-                                </svg>
-                            </div>
-                        </div>
-                        <span>Send</span>
-                    </button>
-                </div>
-            </form>
+        <div class="contact-form-row">
+            <div class="contact-form-field">
+                <input type="text" id="subject" name="subject" placeholder=" " required>
+                <label for="subject">Subject</label>
+            </div>
+            <div class="contact-form-field">
+                <textarea id="message" name="message" rows="1" placeholder=" " required></textarea>
+                <label for="message">Message</label>
+            </div>
         </div>
-    </div>
-
-    <footer></footer>
-
-    <script src="../js/loaders/icon-loader.js"></script>
-    <script src="../js/refresh-forms.js"></script>
-    <script src="../js/loaders/header-loader.js"></script>
-    <script src="../js/loaders/footer-loader.js"></script>
-    <script src="../js/back-to-top.js"></script>
-    <script src="../js/route.js"></script>
-    <script>
-        loadHeader('contact');
-        loadFooter();
-        
-        document.getElementById('contact-triangle-icon-1').innerHTML = loadIcon('triangle-icon');
-        document.getElementById('contact-triangle-icon-2').innerHTML = loadIcon('triangle-icon');
-    </script>
-</body>
-
-</html>
+        <div class="contact-form-row">
+            <button type="submit" class="contact-form-button">
+                <div class="svg-wrapper-1">
+                    <div class="svg-wrapper">
+                        <img src="./images/icons/arrow-right-2.svg" alt="">
+                    </div>
+                </div>
+                <span>Send</span>
+            </button>
+        </div>
+    </form>
+</div>

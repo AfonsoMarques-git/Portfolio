@@ -1,53 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="hero-section">
+    <h1 class="hero-section-title">See My</h1>
+    <h1 class="hero-section-title">
+        Work
+        <span class="hero-section-icon">
+            <img src="./images/icons/triangle-icon-2.svg" alt="">
+        </span>
+    </h1>
+</div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Afonso Marques</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="shortcut icon" href="../images/logos/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/portfolio.css">
-</head>
-
-<body id="top">
-    <header>
-    </header>
-
-    <hr>
-
-    <div class="main-container">
-        <div class="hero-section">
-            <h1 class="hero-section-title">See My</h1>
-            <h1 class="hero-section-title">
-                Work
-                <span class="hero-section-icon" id="portfolio-triangle-icon"></span>
-            </h1>
-        </div>
-
-        <div class="works-section" id="works-section">
-            <!-- Works will be dynamically loaded here -->
-        </div>
-    </div>
-
-    <footer></footer>
-
-    <script src="../js/loaders/icon-loader.js"></script>
-    <script src="../js/loaders/header-loader.js"></script>
-    <script src="../js/loaders/footer-loader.js"></script>
-    <script src="../js/works/all-works.js"></script>
-    <script src="../js/back-to-top.js"></script>
-    <script src="../js/route.js"></script>
-    <script>
-        loadHeader('portfolio');
-        loadFooter();
-        
-        document.getElementById('portfolio-triangle-icon').innerHTML = loadIcon('triangle-icon');
-    </script>
-</body>
-
-</html>
+<div class="works-section" id="works-section">
+    <!-- Works will be dynamically loaded here -->
+</div>

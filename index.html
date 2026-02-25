@@ -8,62 +8,35 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./images/logos/favicon.png" type="image/x-icon">
+    <script src="./js/loaders/css-loader.js"></script>
 </head>
 
-<body id="top">
-    <header>
-    </header>
+<body id="top" style="opacity: 0;">
+    <header></header>
 
     <hr>
 
-    <div class="main-container">
-        <div class="hero-section">
-            <h1 class="hero-section-title">Visual</h1>
-            <h1 class="hero-section-title">
-                Design
-                <span class="hero-section-icon" id="triangle-icon-1"></span>
-            </h1>
-            <h1 class="hero-section-title">
-                <span class="hero-section-icon" id="plus-icon"></span>
-                Digital
-            </h1>
-            <h1 class="hero-section-title">Thinking
-                <span class="hero-section-icon" id="triangle-icon-2"></span>
-                <a href="#works-section"><span class="hero-section-icon" id="arrow-down-icon"></span></a>
-            </h1>
-        </div>
+    <div class="main-container"></div>
 
-        <div class="works-section" id="works-section">
-        </div>
+    <footer></footer>
 
-        <div class="see-more">
-            <h1>See More</h1>
-            <a href="./pages/about.html"><span id="see-more-icon"></span></a>
-        </div>
-    </div>
-
-    <footer>
-    </footer>
-
-    <script src="./js/loaders/icon-loader.js"></script>
     <script src="./js/loaders/header-loader.js"></script>
     <script src="./js/loaders/footer-loader.js"></script>
     <script src="./js/works/main-page-works.js"></script>
-    <script src="./js/back-to-top.js"></script>
-    <script src="./js/route.js"></script>
+    <script src="./js/works/all-works.js"></script>
+    <script src="./js/refresh-forms.js"></script>
+    <script src="./js/router.js"></script>
     <script>
-        loadHeader();
-        loadFooter();
-        
-        document.getElementById('triangle-icon-1').innerHTML = loadIcon('triangle-icon');
-        document.getElementById('plus-icon').innerHTML = loadIcon('plus-icon');
-        document.getElementById('triangle-icon-2').innerHTML = loadIcon('triangle-icon');
-        document.getElementById('arrow-down-icon').innerHTML = loadIcon('arrow-down');
-        document.getElementById('see-more-icon').innerHTML = loadIcon('plus-icon');
+        Promise.all([
+            loadAllCss(),
+            loadHeader(),
+            loadFooter()
+        ]).then(() => {
+            handleRouting();
+            document.body.style.transition = 'opacity 0.3s ease';
+            document.body.style.opacity = '1';
+        });
     </script>
 </body>
 

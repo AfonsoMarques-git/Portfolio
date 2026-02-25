@@ -1,25 +1,16 @@
-function loadHeader(currentPage = 'home') {
+function loadHeader() {
     const headerContainer = document.querySelector('header');
-    const isSubpage = window.location.pathname.includes('/pages/');
-    const basePath = isSubpage ? '../' : './';
 
-    console.log('Current Page Parameter:', currentPage);
-
-    fetch(`${basePath}json/header-data.json`)
+    return fetch('./json/header-data.json')
         .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             return response.json();
         })
         .then(data => {
-            const logoPath = isSubpage ? data.logo.src.replace('./', '../') : data.logo.src;
-            const logoLink = isSubpage ? '../index.html' : './index.html';
-
             headerContainer.innerHTML = `
                 <div class="logo">
-                    <a href="${logoLink}">
-                        <img src="${logoPath}" alt="${data.logo.alt}">
+                    <a href="#home">
+                        <img src="${data.logo.src}" alt="${data.logo.alt}">
                     </a>
                 </div>
                 <div class="hamburguer">
@@ -29,28 +20,15 @@ function loadHeader(currentPage = 'home') {
                 </div>
                 <nav class="menu">
                     <ul>
-                        ${data.navigation.map(item => {
-                let itemLink;
-                if (item.link.includes('index.html')) {
-                    itemLink = isSubpage ? '../index.html' : './index.html';
-                } else if (item.link.includes('./pages/')) {
-                    itemLink = isSubpage ? item.link.replace('./pages/', '') : item.link;
-                } else {
-                    itemLink = item.link;
-                }
-
-                const isActive = item.label.toLowerCase() === currentPage.toLowerCase();
-                console.log(`Item: ${item.label}, isActive: ${isActive}`);
-
-                return `<li ${isActive ? 'class="active"' : ''}>
-                                <a href="${itemLink}">${item.label}</a>
-                            </li>`;
-            }).join('')}
+                        ${data.navigation.map(item => `
+                            <li>
+                                <a href="${item.link}">${item.label}</a>
+                            </li>
+                        `).join('')}
                     </ul>
                 </nav>
             `;
 
-            // Initialize hamburger menu
             const hamburguer = document.querySelector('.hamburguer');
             const menu = document.querySelector('.menu');
 
@@ -70,7 +48,6 @@ function loadHeader(currentPage = 'home') {
                 });
             }
 
-            // Add loaded class AFTER content is inserted
             headerContainer.classList.add('loaded');
         })
         .catch(error => {

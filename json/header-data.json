@@ -2,24 +2,24 @@
     "logo": {
         "src": "./images/logos/logo.png",
         "alt": "Logo",
-        "link": "./index.html"
+        "link": "#home"
     },
     "navigation": [
         {
             "label": "Home",
-            "link": "./index.html"
+            "link": "#home"
         },
         {
             "label": "About",
-            "link": "./pages/about.html"
+            "link": "#about"
         },
         {
             "label": "Contact",
-            "link": "./pages/contact.html"
+            "link": "#contact"
         },
         {
             "label": "Portfolio",
-            "link": "./pages/portfolio.html"
+            "link": "#portfolio"
         }
     ]
 }

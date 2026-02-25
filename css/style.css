@@ -85,7 +85,7 @@ body {
     vertical-align: middle;
 }
 
-.hero-section>.hero-section-title>.hero-section-icon svg {
+.hero-section>.hero-section-title>.hero-section-icon img {
     height: 90px;
     width: auto;
     display: block;
@@ -96,7 +96,7 @@ body {
     vertical-align: middle;
 }
 
-.hero-section>.hero-section-title>a>.hero-section-icon svg {
+.hero-section>.hero-section-title>a>.hero-section-icon img {
     height: 90px;
     width: auto;
     display: block;
@@ -111,9 +111,24 @@ body {
     flex-direction: column;
 }
 
+.works-section.home-works-section {
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.works-section.home-works-section .work-item {
+    flex-direction: row;
+}
+
+.works-section.home-works-section .work-image,
+.works-section.home-works-section .work-content {
+    width: 50%;
+}
+
 .works-section section {
     display: flex;
-    gap: 40px;
+    justify-content: space-between;
     margin-bottom: 80px;
     align-items: flex-start;
 }
@@ -152,6 +167,10 @@ body {
     height: auto;
     object-fit: cover;
     display: block;
+}
+
+.works-section.home-works-section .work-image img {
+    width: 100%;
 }
 
 .works-section section:nth-child(1) {
@@ -232,6 +251,7 @@ body {
 }
 
 .see-more.visible {
+    opacity: 1;
     animation: fadeInLeft 0.8s ease forwards;
 }
 
@@ -241,13 +261,13 @@ body {
     text-transform: uppercase;
 }
 
-.see-more a svg {
+.see-more a img {
     width: 120px;
     height: auto;
     display: block;
 }
 
-.see-more a svg:hover {
+.see-more a img:hover {
     transform: translateX(3px);
     transition: transform 0.3s ease;
 }
@@ -272,12 +292,12 @@ body {
         font-size: 9rem;
     }
 
-    .hero-section>.hero-section-title>a>.hero-section-icon svg {
+    .hero-section>.hero-section-title>a>.hero-section-icon img {
         height: 75px;
         width: auto;
     }
 
-    .hero-section>.hero-section-title>.hero-section-icon svg{
+    .hero-section>.hero-section-title>.hero-section-icon img{
         height: 75px;
         width: auto;
     }
@@ -293,12 +313,12 @@ body {
         font-size: 8rem;
     }
 
-    .hero-section>.hero-section-title>a>.hero-section-icon svg{
+    .hero-section>.hero-section-title>a>.hero-section-icon img{
         height: 65px;
         width: auto;
     }
 
-    .hero-section>.hero-section-title>.hero-section-icon svg{
+    .hero-section>.hero-section-title>.hero-section-icon img{
         height: 65px;
         width: auto;
     }
@@ -309,6 +329,14 @@ body {
 
     .works-section section>div {
         width: 100%;
+    }
+
+    .works-section.home-works-section .work-item {
+        flex-direction: row;
+    }
+
+    .works-section.home-works-section section>div {
+        width: 50%;
     }
 }
 
@@ -325,12 +353,12 @@ body {
         font-size: 7rem;
     }
 
-    .hero-section>.hero-section-title>a>.hero-section-icon svg {
+    .hero-section>.hero-section-title>a>.hero-section-icon img {
         height: 55px;
         width: auto;
     }
 
-    .hero-section>.hero-section-title>.hero-section-icon svg {
+    .hero-section>.hero-section-title>.hero-section-icon img {
         height: 55px;
         width: auto;
     }
@@ -359,12 +387,12 @@ body {
         font-size: 6rem;
     }
 
-    .hero-section>.hero-section-title>a>.hero-section-icon svg {
+    .hero-section>.hero-section-title>a>.hero-section-icon img {
         height: 45px;
         width: auto;
     }
 
-    .hero-section>.hero-section-title>.hero-section-icon svg {
+    .hero-section>.hero-section-title>.hero-section-icon img {
         height: 45px;
         width: auto;
     }
@@ -389,12 +417,12 @@ body {
         padding-left: 0;
     }
 
-    .hero-section>.hero-section-title>a>.hero-section-icon svg {
+    .hero-section>.hero-section-title>a>.hero-section-icon img {
         height: 55px;
         width: auto;
     }
 
-    .hero-section>.hero-section-title>.hero-section-icon svg {
+    .hero-section>.hero-section-title>.hero-section-icon img {
         display: none;
     }
 
@@ -445,7 +473,7 @@ body {
         font-size: 6rem;
     }
 
-    .hero-section>.hero-section-title>a>.hero-section-icon svg{
+    .hero-section>.hero-section-title>a>.hero-section-icon img{
         display: none;
     }
 

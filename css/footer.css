@@ -21,9 +21,29 @@ footer {
     gap: 20px;
 }
 
-.footer-content>.social-media img {
-    height: 30px;
-    width: auto;
+.footer-content>.social-media a {
+    position: relative;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.footer-content>.social-media a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 1px;
+    background-color: var(--text-color);
+    transition: width 0.3s ease;
+}
+
+.footer-content>.social-media a:hover::after {
+    width: 100%;
+}
+
+.footer-content>.social-media a:hover {
+    transition: color 0.3s ease;
 }
 
 .footer-base {

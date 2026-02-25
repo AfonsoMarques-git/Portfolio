@@ -1,73 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="hero-section">
+    <h1 class="hero-section-title">Get To</h1>
+    <h1 class="hero-section-title">
+        Know Me
+        <span class="hero-section-icon">
+            <img src="./images/icons/triangle-icon-2.svg" alt="">
+        </span>
+    </h1>
+</div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Afonso Marques</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="shortcut icon" href="../images/logos/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/about.css">
-</head>
-
-<body id="top">
-    <header>
-    </header>
-
-    <hr>
-
-    <div class="main-container">
-        <div class="hero-section">
-            <h1 class="hero-section-title">Get To</h1>
-            <h1 class="hero-section-title">
-                Know Me
-                <span class="hero-section-icon" id="about-triangle-icon"></span>
-            </h1>
-        </div>
-
-        <div class="about-section">
-            <div class="personal-photo">
-                <img src="../images/personPlaceholder.png" alt="Personal Photo">
-            </div>
-            <div class="personal-information">
-                <div class="text">
-                    <p>I am a dedicated Junior Web Developer with a strong passion for creating engaging and
-                        user-friendly websites. I enjoy working with modern technologies, bringing ideas to life, and
-                        continuously improving my skills to deliver high-quality digital experiences. </p>
-                </div>
-                <div class="cards">
-                    <div class="card1">
-                    </div>
-                    <div class="card2">
-                    </div>
-                    <div class="card3">
-                    </div>
-                </div>
-                <div class="tools-languages">
-
-                </div>
-            </div>
-        </div>
+<div class="about-section">
+    <div class="personal-photo">
+        <img src="./images/personPlaceholder.png" alt="Personal Photo">
     </div>
-
-    <footer></footer>
-
-    <script src="../js/loaders/icon-loader.js"></script>
-    <script src="../js/loaders/header-loader.js"></script>
-    <script src="../js/loaders/footer-loader.js"></script>
-    <script src="../js/back-to-top.js"></script>
-    <script src="../js/route.js"></script>
-    <script>
-        loadHeader('about');
-        loadFooter();
-        
-        document.getElementById('about-triangle-icon').innerHTML = loadIcon('triangle-icon');
-    </script>
-
-</body>
-
-</html>
+    <div class="personal-information">
+        <div class="text">
+            <p>I am a dedicated Junior Web Developer with a strong passion for creating engaging and
+                user-friendly websites. I enjoy working with modern technologies, bringing ideas to life, and
+                continuously improving my skills to deliver high-quality digital experiences.</p>
+        </div>
+        <div class="cards">
+            <div class="about-card">
+                <div class="icon">
+                    <img src="../images/icons/code.svg" alt="Languages">
+                </div>
+                <div class="text">
+                    <p>Multiple languages in web developing</p>
+                </div>
+            </div>
+            <div class="about-card">
+                <div class="icon">
+                    <img src="../images/icons/education.svg" alt="Education">
+                </div>
+                <div class="text">
+                    <p>IT Management and Programming</p>
+                </div>
+            </div>
+            <div class="about-card">
+                <div class="icon">
+                    <img src="../images/icons/projects.svg" alt="Projects">
+                </div>
+                <div class="text">
+                    <p>Built more than 5 projects</p>
+                </div>
+            </div>
+        </div>
+        <div class="tools">
+            <div class="title">
+                <p>Some tools i use</p>
+                <div class="tool">
+                    <img src="../images/icons/figma.svg" alt="Figma">
+                </div>
+                <div class="tool">
+                    <img src="../images/icons/vs-code.svg" alt="VS Code">
+                </div>
+                <div class="tool">
+                    <img src="../images/icons/git.svg" alt="Git">
+                </div>
+                <div class="tool">
+                    <img src="../images/icons/wordpress.svg" alt="Wordpress">
+                </div>
+            </div>
+        </div>
+        <div class="tools-languages"></div>
+    </div>
+</div>
