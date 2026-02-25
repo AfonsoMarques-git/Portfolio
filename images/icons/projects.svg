@@ -1,9 +1,7 @@
-<svg width="33" height="30" viewBox="0 0 33 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect width="33" height="30" fill="url(#pattern0_16_153)"/>
-<defs>
-<pattern id="pattern0_16_153" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_16_153" transform="matrix(0.0192308 0 0 0.0211538 0 -0.00769231)"/>
-</pattern>
-<image id="image0_16_153" width="52" height="48" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAwCAYAAABe6Vn9AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAI6SURBVHgB7ZntbcIwEIbfVPxvO0HTCVo2CBOUEegEhQkYod2AFegE0AlIJ8CdADqBe6cEyXEuIZEtsKs8kvmwY+debF98B+ABrXWm3cnggRv44Rnu+BjDm6AXuONjDCTwAC2XA73dwY1jkiT3uDbC/tn36HvwvY98LDl77X+jO59nxuqND0H22l+jO/mZsS6P4H7THn1Tqy8vQae9OBJuwgOm6LbJn6zvR+7bR1TZ53Qvfp9Sf9Wxb06O5Ci2sBAqK2Gjhs5KGz9gUorhig2KmYkRRWVCs6VOgtjVpogbRWU8IjEz1MXwuswRNimqdvPnOc/OzlqTH4gEttWyfePkdq+NLhyZySHhV/Mi2lhezneXwrbf12k7GP6/IJrBB0SCtN+lGZogHrJajeDlNogEPhDYxkuCmDkCh2xcSoY3CWKWCBSy7a3J6DZBzIbKFAGgi4doVtrUSO3B2oIyPqctbS6k6H5PEUmQGXCFTs1WyW2P0S8vcC22KGyt0HiW00VKaYYizPaS1fSAQpEpWpOZW66o2d8kyEZXn8p2dDuB+z5Ky3FPKBgPeY5GIdtVsX+EjpgDCn5kT+0/cEDyTU0i2hhO26HTeclZLFB1l79wh13wq/W9N0PEGjqDoNAZBIXOICh0pDRWLLGQCAtSVt0MkcC5Basq56MPxxdmwztdyDHQF8KGbbSzU3lSxjk7xBN2t/F4U8YcC8TPohI/cbpKC5nICNhrI9VWO1mXjRmVW4QNhyyczKn8tf8HiTbLNoodLQgAAAAASUVORK5CYII="/>
-</defs>
-</svg>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+<svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewBox="0 0 32 32" xml:space="preserve" fill="#000000">
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="SVGRepo_iconCarrier"> <style type="text/css"> .open_een{fill:#000000;} </style> <g> <g> <path class="open_een" d="M28.5,4h-25C2.673,4,2,4.673,2,5.5v14C2,20.327,2.673,21,3.5,21h23c0.276,0,0.5-0.224,0.5-0.5 S26.776,20,26.5,20h-23C3.225,20,3,19.775,3,19.5v-14C3,5.225,3.225,5,3.5,5h25C28.775,5,29,5.225,29,5.5v19 c0,0.275-0.225,0.5-0.5,0.5h-25C3.225,25,3,24.775,3,24.5v-1C3,23.224,2.776,23,2.5,23S2,23.224,2,23.5v1 C2,25.327,2.673,26,3.5,26H15v2h-4c-0.276,0-0.5,0.224-0.5,0.5S10.724,29,11,29h9c0.276,0,0.5-0.224,0.5-0.5S20.276,28,20,28h-4 v-2h12.5c0.827,0,1.5-0.673,1.5-1.5v-19C30,4.673,29.327,4,28.5,4z"/> <circle class="open_een" cx="15.5" cy="23" r="0.5"/> </g> <g> <path class="open_een" d="M28.5,4h-25C2.673,4,2,4.673,2,5.5v14C2,20.327,2.673,21,3.5,21h23c0.276,0,0.5-0.224,0.5-0.5 S26.776,20,26.5,20h-23C3.225,20,3,19.775,3,19.5v-14C3,5.225,3.225,5,3.5,5h25C28.775,5,29,5.225,29,5.5v19 c0,0.275-0.225,0.5-0.5,0.5h-25C3.225,25,3,24.775,3,24.5v-1C3,23.224,2.776,23,2.5,23S2,23.224,2,23.5v1 C2,25.327,2.673,26,3.5,26H15v2h-4c-0.276,0-0.5,0.224-0.5,0.5S10.724,29,11,29h9c0.276,0,0.5-0.224,0.5-0.5S20.276,28,20,28h-4 v-2h12.5c0.827,0,1.5-0.673,1.5-1.5v-19C30,4.673,29.327,4,28.5,4z"/> <circle class="open_een" cx="15.5" cy="23" r="0.5"/> </g> </g> </g>
+</svg>

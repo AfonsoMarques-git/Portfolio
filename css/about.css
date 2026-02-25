@@ -67,21 +67,123 @@ body {
 .hero-section-title:nth-child(4) {
     animation-delay: 0.8s;
 }
+
 /* Hero Section End */
 
 /* About Section */
 .about-section {
     padding: 80px;
     animation: fadeInUp 1s ease forwards;
-    display: flex;
+    display: grid;
+    grid-template-columns: 40% 1fr;
     gap: 100px;
+}
+
+.about-section .personal-photo {
+    width: 100%;
+    max-height: 720px;
+}
+
+.about-section .personal-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.personal-information {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.personal-information .text p {
+    font-size: 1.1rem;
+    line-height: 1.7em;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.personal-information .tools .tool {
+    width: 48px;
+}
+
+.personal-information .tools .tool img {
+    width: 100%;
+    height: auto;
+}
+
+.cards {
+    display: flex;
+    gap: 50px;
+}
+
+.cards .about-card {
+    width: 25%;
+    border: 1px solid var(--text-color);
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.about-card .icon {
+    height: 50px;
+    width: auto;
+}
+
+.about-card .icon img {
+    height: 100%;
+    width: auto;
+}
+
+.about-card .card-text {
+    margin-top: 25px;
+}
+
+.about-card .card-text p {
+    font-size: 0.8rem;
+}
+
+.about-card .card-text h2 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.tools-section {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.tools-section .title {
+    font-size: 1.2rem;
+}
+
+.tools {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.tool {
+    border: 1px solid var(--text-color);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.tool img {
+    width: 100%;
+    height: auto;
 }
 
 @keyframes fadeInUp {
     from {
         opacity: 0;
         transform: translateY(500px);
-    } to {
+    }
+
+    to {
         opacity: 1;
         transform: translateY(0);
     }
@@ -108,6 +210,7 @@ body {
     height: 90px;
     width: auto;
 }
+
 /* Hero Section End */
 
 @media (max-width: 1650px) {
