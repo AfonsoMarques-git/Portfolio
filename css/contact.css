@@ -81,6 +81,18 @@ body {
     }
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(500px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .hero-section>.hero-section-title>.hero-section-icon svg {
     height: 90px;
     width: auto;
@@ -97,6 +109,7 @@ body {
 .contact-section {
     width: 100%;
     padding: 80px;
+    animation: fadeInUp 1s ease forwards;
 }
 
 .contact-form {
@@ -179,62 +192,95 @@ body {
     color: var(--text-color);
 }
 
-.contact-form-button {
-    font-family: var(--main-font);
-    font-size: 20px;
-    background: var(--website-bg-color);
-    color: var(--text-color);
-    padding: 1em 2em 1em 2em;
-    display: flex;
-    align-items: center;
-    border: solid 1px var(--text-color);
+.contact-form-row button {
+    width: 170px;
+    height: 56px;
     overflow: hidden;
-    transition: all 0.2s;
+    border: none;
+    color: #333333;
+    background: none;
+    position: relative;
+    padding-bottom: 2em;
     cursor: pointer;
 }
 
-.contact-form-button span {
-    display: block;
-    margin-left: 0.3em;
-    transition: all 0.3s ease-in-out;
+.contact-form-row button>div,
+.contact-form-row button>svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
 }
 
-.contact-form-button svg {
-    height: 20px;
-    display: block;
-    transform-origin: center center;
-    transition: transform 0.3s ease-in-out;
+.contact-form-row button::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    background: currentColor;
+    transition: transform 0.25s ease-out;
 }
 
-.contact-form-button:hover {
-    background: var(--text-color);
-    color: var(--website-bg-color);
+.contact-form-row button:hover:before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
-.contact-form-button:hover .svg-wrapper {
-    animation: fly-1 0.6s ease-in-out infinite alternate;
+.contact-form-row button .clone>*,
+.contact-form-row button .text>* {
+    opacity: 1;
+    font-family: var(--main-font);
+    font-size: 1rem;
+    transition: 0.2s;
+    margin-left: 4px;
 }
 
-.contact-form-button:hover svg {
-    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+.contact-form-row button .clone>* {
+    transform: translateY(60px);
 }
 
-.contact-form-button:hover span {
-    transform: translateX(5em);
+.contact-form-row button:hover .clone>* {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
 
-.contact-form-button:active {
-    transform: scale(0.95);
+.contact-form-row button:hover .text>* {
+    opacity: 1;
+    transform: translateY(-60px);
+    transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
 
-@keyframes fly-1 {
-    from {
-        transform: translateY(0.1em);
-    }
+.contact-form-row button:hover .clone> :nth-child(1) {
+    transition-delay: 0.15s;
+}
 
-    to {
-        transform: translateY(-0.1em);
-    }
+.contact-form-row button:hover .clone> :nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.contact-form-row button:hover .clone> :nth-child(3) {
+    transition-delay: 0.25s;
+}
+
+.contact-form-row button:hover .clone> :nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+.contact-form-row button svg {
+    width: 20px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(-50deg);
+    transition: 0.2s ease-out;
+}
+
+.contact-form-row button:hover svg {
+    transform: translateY(-50%) rotate(-90deg);
 }
 
 /* Contact Form Section End */
@@ -467,7 +513,7 @@ body {
     }
 }
 
-    /* Form submission message */
+/* Form submission message */
 .toast {
     position: fixed;
     bottom: 30px;
@@ -502,4 +548,5 @@ body {
     border: 1px solid rgba(255, 0, 0, 0.2);
     box-shadow: 1px 1px 10px rgba(255, 0, 0, 0.5);
 }
+
 /* Form submission message End */

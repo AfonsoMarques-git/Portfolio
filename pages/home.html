@@ -1,3 +1,13 @@
+<script>
+    (() => {
+        const isDirectPage = /\/pages\/[^/]+\.html$/i.test(location.pathname);
+        if (!isDirectPage) return;
+
+        const page = location.pathname.split('/').pop().replace('.html', '');
+        location.replace(`../#${encodeURIComponent(page)}`);
+    })();
+</script>
+
 <div class="hero-section">
     <h1 class="hero-section-title">Visual</h1>
     <h1 class="hero-section-title">

@@ -2,12 +2,19 @@ const routes = {
     home: './pages/home.html',
     about: './pages/about.html',
     contact: './pages/contact.html',
-    portfolio: './pages/portfolio.html'
+    portfolio: './pages/portfolio.html',
+    'single-project': './pages/single-project.html'
 };
 
-function navigateTo(page) {
+function normalizePageKey(page) {
+    if (page === 'single_product') return 'single-project'; // backward compatibility
+    return page;
+}
+
+function navigateTo(page, slug = null) {
     const container = document.querySelector('.main-container');
-    const path = routes[page];
+    const normalizedPage = normalizePageKey(page);
+    const path = routes[normalizedPage];
 
     if (!path) {
         container.innerHTML = '<p>Page not found</p>';
@@ -24,8 +31,11 @@ function navigateTo(page) {
         })
         .then(html => {
             container.innerHTML = html;
-            updateActiveNav(page);
-            initPageScripts(page);
+
+            // Keep Portfolio active when viewing a single project
+            updateActiveNav(normalizedPage === 'single-project' ? 'portfolio' : normalizedPage);
+
+            initPageScripts(normalizedPage, slug);
             container.style.opacity = '1';
             window.scrollTo({ top: 0, behavior: 'smooth' });
         })
@@ -36,16 +46,19 @@ function navigateTo(page) {
         });
 }
 
-function initPageScripts(page) {
+function initPageScripts(page, slug = null) {
     switch (page) {
         case 'home':
-            initHomeWorks();
+            if (typeof initHomeWorks === 'function') initHomeWorks();
             break;
         case 'portfolio':
-            initAllWorks();
+            if (typeof initAllWorks === 'function') initAllWorks();
             break;
         case 'contact':
-            initContactForm();
+            if (typeof initContactForm === 'function') initContactForm();
+            break;
+        case 'single-project':
+            if (typeof initSingleProject === 'function') initSingleProject();
             break;
     }
 }
@@ -61,9 +74,16 @@ function updateActiveNav(page) {
 }
 
 function handleRouting() {
-    const hash = window.location.hash.replace('#', '') || 'home';
-    if (!routes[hash]) return;
-    navigateTo(hash);
+    const raw = window.location.hash.replace('#', '') || 'home';
+    const [rawPage, slug] = raw.split('/');
+    const page = normalizePageKey(rawPage);
+
+    if (!routes[page]) {
+        navigateTo('home');
+        return;
+    }
+
+    navigateTo(page, slug || null);
 }
 
 window.addEventListener('hashchange', handleRouting);

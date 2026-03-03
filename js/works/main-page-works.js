@@ -22,7 +22,7 @@ function initHomeWorks() {
                         <span>${work.number}</span>
                         <h3>${work.title}</h3>
                         <p>${work.description}</p>
-                        <img src="${work.direction}" alt="arrow">
+                        <a href="#single_product/${work.id}"><img src="${work.direction}" alt="arrow"></a>
                     </div>
                 `;
                 worksSection.appendChild(workItem);

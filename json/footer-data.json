@@ -10,7 +10,11 @@
         },
         {
             "platform": "LinkedIn",
-            "url": "https://linkedin.com"
+            "url": "https://www.linkedin.com/in/afonso-marques-059785314/"
+        },
+        {
+            "platform": "Github",
+            "url": "https://github.com/AfonsoMarques-git"
         }
     ],
     "copyright": "&copy; 2026 Afonso Marques. All rights reserved."

@@ -1,0 +1,53 @@
+<script>
+    (() => {
+        const isDirectPage = /\/pages\/single-project\.html$/i.test(location.pathname);
+        if (!isDirectPage) return;
+
+        const params = new URLSearchParams(location.search);
+        const id = params.get('id');
+
+        if (id) {
+            location.replace(`../#single-project/${encodeURIComponent(id)}`);
+        } else {
+            location.replace(`../#single-project`);
+        }
+    })();
+</script>
+
+<div class="navegation">
+    <a href="../#portfolio">
+        <img src="./images/icons/arrow-left.svg" alt="Left Arrow Icon">
+        Back to Portfolio
+    </a>
+</div>
+<div class="product-presentation">
+    <div class="images">
+        <div class="main-image">
+            <img src="" alt="">
+        </div>
+        <div class="gallery"></div>
+    </div>
+    <div class="product-info">
+        <div class="project-type"></div>
+        <div class="project-name"></div>
+        <div class="project-description"></div>
+        <div class="open-project">
+            <button onclick="window.location.href='#portfolio'">
+                <div class="text">
+                    <span>See</span>
+                    <span>the</span>
+                    <span>project</span>
+                </div>
+                <div class="clone">
+                    <span>See</span>
+                    <span>the</span>
+                    <span>project</span>
+                </div>
+                <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg" width="20px">
+                    <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>

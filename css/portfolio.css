@@ -110,7 +110,8 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 100px 100px;
 }
-.work-link {
+
+.work-item {
     text-decoration: none;
     color: inherit;
     display: block;
@@ -119,11 +120,11 @@ body {
     transform: translateX(-200px);
 }
 
-.work-link.visible {
+.work-item.visible {
     animation: fadeInUp 0.8s ease forwards;
 }
 
-.work-link:hover {
+.work-item:hover {
     transform: translateY(-5px);
 }
 .works-section section {
@@ -131,23 +132,6 @@ body {
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
-}
-
-.work-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    opacity: 0;
-    transform: translateX(-200px);
-}
-
-.work-link.visible {
-    animation: fadeInUp 0.8s ease forwards;
-}
-
-.work-link:hover {
-    transform: translateY(-5px);
 }
 
 .works-section section img {
@@ -162,7 +146,7 @@ body {
     justify-content: center;
 }
 
-.works-section>.work-content {
+.work-content {
     width: 100%;
 }
 
@@ -296,10 +280,6 @@ body {
     .hero-section>.hero-section-title>.hero-section-icon svg {
         height: 65px;
         width: auto;
-    }
-
-    .work-item {
-        flex-direction: column;
     }
 
     .works-section section>div {

@@ -1,3 +1,13 @@
+<script>
+    (() => {
+        const isDirectPage = /\/pages\/[^/]+\.html$/i.test(location.pathname);
+        if (!isDirectPage) return;
+
+        const page = location.pathname.split('/').pop().replace('.html', '');
+        location.replace(`../#${encodeURIComponent(page)}`);
+    })();
+</script>
+
 <div class="hero-section">
     <h1 class="hero-section-title">Get To</h1>
     <h1 class="hero-section-title">
@@ -10,7 +20,37 @@
 
 <div class="about-section">
     <div class="personal-photo">
-        <img src="./images/me.jpeg" alt="Personal Photo">
+        <div class="background" aria-hidden="true">
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+        </div>
+        <script>
+            (() => {
+                const photo = document.querySelector('.personal-photo');
+                if (!photo) return;
+
+                let leaveTimer;
+                photo.addEventListener('mouseenter', () => {
+                    clearTimeout(leaveTimer);
+                    photo.classList.remove('is-leaving');
+                });
+
+                photo.addEventListener('mouseleave', () => {
+                    photo.classList.add('is-leaving');
+                    clearTimeout(leaveTimer);
+                    leaveTimer = setTimeout(() => {
+                        photo.classList.remove('is-leaving');
+                    }, 1000);
+                });
+            })();
+        </script>
+        <img src="./images/me2.png" style="transform: rotateY(180deg);" alt="Personal Photo">
     </div>
     <div class="personal-information">
         <div class="text">

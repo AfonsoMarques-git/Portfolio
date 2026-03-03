@@ -1,3 +1,13 @@
+<script>
+    (() => {
+        const isDirectPage = /\/pages\/[^/]+\.html$/i.test(location.pathname);
+        if (!isDirectPage) return;
+
+        const page = location.pathname.split('/').pop().replace('.html', '');
+        location.replace(`../#${encodeURIComponent(page)}`);
+    })();
+</script>
+
 <div class="hero-section">
     <h1 class="hero-section-title">If You Like</h1>
     <h1 class="hero-section-title">
@@ -38,13 +48,21 @@
             </div>
         </div>
         <div class="contact-form-row">
-            <button type="submit" class="contact-form-button">
-                <div class="svg-wrapper-1">
-                    <div class="svg-wrapper">
-                        <img src="./images/icons/arrow-right-2.svg" alt="">
-                    </div>
+            <button type="submit">
+                <div class="text">
+                    <span>Send</span>
+                    <span>a</span>
+                    <span>message</span>
                 </div>
-                <span>Send</span>
+                <div class="clone">
+                    <span>Send</span>
+                    <span>a</span>
+                    <span>message</span>
+                </div>
+                <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg" width="20px">
+                    <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
+                </svg>
             </button>
         </div>
     </form>

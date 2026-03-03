@@ -6,7 +6,8 @@
             "title": "Hotel Manager",
             "description": "A comprehensive hotel management dashboard enabling real-time room reservation handling, occupancy tracking, and statistical analysis for efficient operational oversight",
             "image": "/images/works/placeholder.png",
-            "direction": "/images/icons/arrow-right.svg"
+            "direction": "/images/icons/arrow-right.svg",
+            "link": "/pages/single-project.html"
         },
         {
             "id": "work2",
@@ -14,7 +15,8 @@
             "title": "Technology Week Website",
             "description": "A dynamic Technology Week website featuring event schedules, speaker profiles, workshop sign-ups, live-streamed sessions, and curated resources to showcase innovations, drive engagement, and facilitate networking among attendees.",
             "image": "/images/works/placeholder.png",
-            "direction": "/images/icons/arrow-right.svg"
+            "direction": "/images/icons/arrow-right.svg",
+            "link": "/pages/single-project.html"
         }
     ]
 }

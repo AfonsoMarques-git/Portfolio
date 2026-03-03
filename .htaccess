@@ -1,0 +1,9 @@
+Options -MultiViews
+DirectoryIndex index.html
+
+RewriteEngine On
+
+# Redirect every .html request to /index.html, except /index.html itself
+RewriteCond %{REQUEST_URI} !^/index\.html$ [NC]
+RewriteCond %{REQUEST_URI} \.html$ [NC]
+RewriteRule ^ /index.html [R=302,L]
