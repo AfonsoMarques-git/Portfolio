@@ -1,4 +1,11 @@
 /* Header / Nav / Menu */
+body.menu-open {
+    overflow: hidden;
+    height: 100dvh;
+    touch-action: none;
+    overscroll-behavior: none;
+}
+
 header {
     height: auto;
     width: auto;
@@ -97,7 +104,7 @@ header nav ul li.active a::after {
 }
 
 /* Responsive Header Styles */
-@media (max-width: 770px) {
+@media (max-width: 920px) {
     header nav {
         position: fixed;
         top: 0;

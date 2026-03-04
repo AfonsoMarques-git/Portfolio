@@ -89,11 +89,7 @@ footer {
     }
 }
 
-@media (max-width: 450px) {
-    footer {
-        padding-top: 100px;
-    }
-
+@media (max-width: 560px) {
     .footer-content {
         flex-direction: column;
         gap: 20px;
@@ -101,6 +97,12 @@ footer {
 
     .footer-content>img {
         width: 150px;
+    }
+}
+
+@media (max-width: 450px) {
+    footer {
+        padding-top: 100px;
     }
 
     .footer-base {
