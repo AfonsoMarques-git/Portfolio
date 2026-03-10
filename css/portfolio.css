@@ -72,13 +72,13 @@
 /* Hero Section End */
 
 /* Works Section */
-.works-section {
+.portfolio-works-section {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 100px 100px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 50px;
 }
 
-.work-item {
+.portfolio-work-item {
     text-decoration: none;
     color: inherit;
     display: block;
@@ -87,87 +87,78 @@
     transform: translateX(-200px);
 }
 
-.work-item.visible {
+.portfolio-work-item.visible {
     animation: fadeInUp 0.8s ease forwards;
 }
 
-.work-item:hover {
+.portfolio-work-item:hover {
     transform: translateY(-5px);
 }
-.works-section section {
+
+.portfolio-works-section .portfolio-work-item {
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
 }
 
-.works-section section img {
-    height: auto;
-    object-fit: cover;
-}
-
-.works-section section>div {
+.portfolio-works-section .portfolio-work-item>div {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.work-content {
+.portfolio-work-image {
     width: 100%;
 }
 
-.work-image {
-    width: 100%;
-}
-
-.work-image img {
+.portfolio-work-image img {
     width: 100%;
     height: auto;
-    aspect-ratio: 16/9;
     object-fit: cover;
     display: block;
 }
 
-.works-section section:nth-child(1) {
+.portfolio-works-section .portfolio-work-item:nth-child(1) {
     animation-delay: 0.2s;
 }
 
-.works-section section:nth-child(2) {
+.portfolio-works-section .portfolio-work-item:nth-child(2) {
     animation-delay: 0.4s;
 }
 
-.works-section section:nth-child(3) {
+.portfolio-works-section .portfolio-work-item:nth-child(3) {
     animation-delay: 0.6s;
 }
 
-.works-section section:nth-child(4) {
+.portfolio-works-section .portfolio-work-item:nth-child(4) {
     animation-delay: 0.8s;
 }
 
-.work-content {
+.portfolio-work-content {
     width: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
 }
 
-.work-content hr {
+.portfolio-work-content hr {
     width: 100%;
     margin-bottom: 20px;
 }
 
-.work-content span {
+.portfolio-work-number {
     font-size: 1.1em;
     font-weight: 700;
     position: absolute;
     top: 25px;
-    left: 0px;
+    left: 0;
     color: #7a7a7a;
     opacity: 0.9;
 }
 
-.work-content h3 {
+.portfolio-work-title {
     font-size: 2.2em;
     font-weight: 500;
     margin: 10px 10px 30px 10px;
@@ -176,39 +167,38 @@
     text-transform: uppercase;
 }
 
-.work-content p {
+.portfolio-work-description {
     font-size: 1.1em;
     line-height: 1.6;
     padding-left: 30px;
     max-width: 90%;
 }
 
-.work-content img {
+.portfolio-work-arrow {
     width: 100px;
     height: auto;
     margin-top: 50px;
     padding-left: 30px;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-.work-content img:hover {
+.portfolio-work-arrow:hover {
     transform: translateX(3px);
-    transition: transform 0.3s ease;
 }
 
 /* Works Section End */
 
 @media (max-width: 1840px) {
-    .work-content img {
+    .portfolio-work-arrow {
         width: 80px;
-        height: auto;
     }
 
-    .work-content h3 {
+    .portfolio-work-title {
         font-size: 2rem;
     }
 
-    .work-content p {
+    .portfolio-work-description {
         font-size: 1rem;
     }
 }
@@ -249,7 +239,7 @@
         width: auto;
     }
 
-    .works-section section>div {
+    .portfolio-works-section .portfolio-work-item>div {
         width: 100%;
     }
 }
@@ -273,8 +263,7 @@
         width: auto;
     }
 
-    /* Switch to single column on medium screens */
-    .works-section {
+    .portfolio-works-section {
         grid-template-columns: 1fr;
         gap: 60px;
     }
@@ -332,8 +321,8 @@
         font-size: 6rem;
     }
 
-    .work-content p {
-        max-width: 85%;
+    .portfolio-work-description {
+        max-width: 90%;
     }
 }
 
@@ -381,10 +370,9 @@
         font-size: 5rem;
     }
 
-    .work-content p {
+    .portfolio-work-description {
         font-size: 1rem;
         max-width: 100%;
-        padding-left: 30px;
     }
 }
 
@@ -405,7 +393,7 @@
         font-size: 4rem;
     }
 
-    .works-section {
+    .portfolio-works-section {
         padding-bottom: 50px;
     }
 }

@@ -153,6 +153,12 @@ body {
     }
 }
 
+@media (max-width: 625px) {
+    .hero-section {
+        padding-bottom: 50px;
+    }
+}
+
 @media (max-width: 575px) {
     .hero-section-title:nth-child(1) {
         font-size: 5rem;
@@ -189,7 +195,7 @@ body {
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 440px) {
     body {
         padding: 50px 20px 50px 20px;
     }

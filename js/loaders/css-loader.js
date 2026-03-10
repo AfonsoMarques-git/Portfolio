@@ -6,7 +6,8 @@ const allCSS = [
     '/css/contact.css',
     '/css/portfolio.css',
     '/css/single-project.css',
-    '/css/global.css'
+    '/css/global.css',
+    '/css/404.css'
 ];
 
 function loadAllCss() {

@@ -2,8 +2,8 @@
 .hero-section {
     height: auto;
     max-height: 100%;
-    padding: 80px;
-    padding-bottom: 150px;
+    padding: clamp(28px, 5vw, 80px);
+    padding-bottom: clamp(56px, 9vw, 150px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,7 +11,7 @@
 }
 
 .hero-section-title {
-    font-size: 11rem;
+    font-size: clamp(2.8rem, 12vw, 11rem);
     line-height: 1em;
     font-weight: 100;
     text-transform: uppercase;
@@ -39,220 +39,36 @@
 
 /* About Section */
 .about-section {
-    padding: 80px;
-    animation: fadeInUp 1s ease forwards;
-    display: grid;
-    grid-template-columns: 40% 1fr;
-    gap: 100px;
-}
-
-.about-section .personal-photo {
-    width: 100%;
-    max-height: 720px;
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    /* hidden normally */
-    cursor: pointer;
-}
-
-.about-section .personal-photo:hover {
-    overflow: visible;
-    /* allow balls outside on hover */
-}
-
-.about-section .personal-photo img {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.personal-photo .background {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-}
-
-/* Ball container starts in center */
-.personal-photo .ball {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    opacity: 0;
-    transition:
-        top 650ms cubic-bezier(.22, .9, .2, 1),
-        left 650ms cubic-bezier(.22, .9, .2, 1),
-        opacity 260ms ease;
-}
-
-.personal-photo .ball::before {
-    content: "";
-    position: absolute;
-    width: 13vmin;
-    height: 13vmin;
-    border-radius: 50%;
-    backface-visibility: hidden;
-    color: inherit;
-    box-shadow: var(--shadow);
-    transform: translate(-50%, -50%) scale(0.08) rotate(0deg);
-    transform-origin: var(--origin-x) var(--origin-y);
-    animation: move var(--dur) linear infinite;
-    animation-delay: var(--delay);
-    animation-play-state: paused;
-    opacity: 0;
-    transition:
-        transform 650ms cubic-bezier(.22, .9, .2, 1),
-        opacity 260ms ease,
-        filter 400ms ease;
-}
-
-.personal-photo:hover .ball {
-    top: var(--top);
-    left: var(--left);
-    opacity: 1;
-}
-
-.personal-photo:hover .ball::before {
-    transform: translate(-50%, -50%) scale(1) rotate(0deg);
-    opacity: 0.28;
-    animation-play-state: running;
-    filter: blur(0);
-}
-
-/* mouse-leave "portal suck" */
-.personal-photo.is-leaving .ball {
-    transition:
-        top 900ms cubic-bezier(.75, 0, 1, .25),
-        left 900ms cubic-bezier(.75, 0, 1, .25),
-        opacity 700ms ease;
-}
-
-.personal-photo.is-leaving .ball::before {
-    transform: translate(-50%, -50%) scale(0) rotate(0deg);
-    opacity: 0;
-    filter: blur(3px);
-    transition:
-        transform 900ms cubic-bezier(.75, 0, 1, .25),
-        opacity 700ms ease,
-        filter 900ms ease;
-}
-
-
-.personal-photo .ball:nth-child(odd) {
-    color: #1c3e5e;
-}
-
-.personal-photo .ball:nth-child(even) {
-    color: #919291;
-}
-
-/* Per-ball values */
-.personal-photo .ball:nth-child(1) {
-    --top: 8%;
-    --left: 18%;
-    --dur: 26s;
-    --delay: -2s;
-    --origin-x: 7vw;
-    --origin-y: -3vh;
-    --shadow: 24vmin 0 3.2vmin currentColor;
-}
-
-.personal-photo .ball:nth-child(2) {
-    --top: 6%;
-    --left: 78%;
-    --dur: 30s;
-    --delay: -10s;
-    --origin-x: -7vw;
-    --origin-y: 2vh;
-    --shadow: -24vmin 0 3.4vmin currentColor;
-}
-
-.personal-photo .ball:nth-child(3) {
-    --top: 32%;
-    --left: 104%;
-    --dur: 22s;
-    --delay: -6s;
-    --origin-x: -6vw;
-    --origin-y: -2vh;
-    --shadow: 20vmin 0 3.1vmin currentColor;
-}
-
-.personal-photo .ball:nth-child(4) {
-    --top: 76%;
-    --left: 96%;
-    --dur: 28s;
-    --delay: -14s;
-    --origin-x: -8vw;
-    --origin-y: -3vh;
-    --shadow: -22vmin 0 3.3vmin currentColor;
-}
-
-.personal-photo .ball:nth-child(5) {
-    --top: 102%;
-    --left: 62%;
-    --dur: 24s;
-    --delay: -4s;
-    --origin-x: 6vw;
-    --origin-y: -2vh;
-    --shadow: 22vmin 0 3.2vmin currentColor;
-}
-
-.personal-photo .ball:nth-child(6) {
-    --top: 98%;
-    --left: 20%;
-    --dur: 27s;
-    --delay: -12s;
-    --origin-x: 7vw;
-    --origin-y: 2vh;
-    --shadow: -20vmin 0 3.0vmin currentColor;
-}
-
-.personal-photo .ball:nth-child(7) {
-    --top: 58%;
-    --left: -4%;
-    --dur: 31s;
-    --delay: -8s;
-    --origin-x: 5vw;
-    --origin-y: -2vh;
-    --shadow: 21vmin 0 3.1vmin currentColor;
-}
-
-.personal-photo .ball:nth-child(8) {
-    --top: 20%;
-    --left: -6%;
-    --dur: 25s;
-    --delay: -16s;
-    --origin-x: 6vw;
-    --origin-y: 1vh;
-    --shadow: -21vmin 0 3.2vmin currentColor;
-}
-
-@keyframes move {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
+    padding: clamp(28px, 5vw, 80px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(10px, 2vw, 24px);
+    align-items: start;
 }
 
 .personal-information {
+    animation: fadeInUp 1.5s ease forwards;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 100px;
     width: 100%;
 }
 
+.personal-information .left-column {
+    width: 50%;
+}
+
+.personal-information .right-column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
 .personal-information .text p {
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 1.1vw, 1.1rem);
     line-height: 1.7em;
-    max-width: 800px;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .personal-information .tools .tool {
@@ -265,15 +81,17 @@
 }
 
 .cards {
-    display: flex;
-    gap: 50px;
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
 }
 
 .cards .about-card {
-    width: 25%;
+    width: 100%;
+    min-width: 0;
     border: 1px solid var(--text-color);
-    padding: 20px;
-    margin-top: 50px;
+    padding: 20px 10px 20px 20px;
 }
 
 .about-card .icon {
@@ -291,7 +109,7 @@
 }
 
 .about-card .card-text p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 .about-card .card-text h2 {
@@ -315,6 +133,7 @@
     display: flex;
     justify-content: flex-start;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .tool {
@@ -322,6 +141,8 @@
     padding: 10px;
     display: flex;
     align-items: center;
+    width: 64px;
+    justify-content: center;
 }
 
 .tool img {
@@ -369,3 +190,103 @@
 }
 
 /* Hero Section End */
+
+@media (max-width: 1650px) {
+    .about-section .personal-information {
+        flex-wrap: wrap;
+    }
+
+    .personal-information .left-column,
+    .personal-information .right-column,
+    .personal-information .left-column .text p {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1435px) {
+    .about-section {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1200px) {
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero-section>.hero-section-title>.hero-section-icon svg,
+    .hero-section>.hero-section-title>a>.hero-section-icon svg {
+        height: 72px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        padding-bottom: clamp(40px, 8vw, 80px);
+    }
+
+    .about-section {
+        flex-direction: column;
+    }
+
+    .personal-information .text p {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section-title {
+        letter-spacing: 0.01em;
+    }
+
+    .hero-section>.hero-section-title>.hero-section-icon svg,
+    .hero-section>.hero-section-title>a>.hero-section-icon svg {
+        height: 52px;
+    }
+
+    .personal-information {
+        gap: 40px;
+    }
+
+    .cards {
+        margin-top: 28px;
+        grid-template-columns: 1fr;
+    }
+
+    .cards .about-card {
+        padding: 18px;
+    }
+
+    .tools-section {
+        margin-top: 36px;
+        gap: 20px;
+    }
+
+    .tools {
+        gap: 14px;
+    }
+
+    .tool {
+        width: 56px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .personal-information .text p {
+        margin-bottom: 16px;
+        line-height: 1.65em;
+    }
+
+    .about-card .card-text {
+        margin-top: 16px;
+    }
+
+    .about-card .card-text p {
+        font-size: 0.82rem;
+    }
+
+    .about-section {
+        padding: 0;
+    }
+}

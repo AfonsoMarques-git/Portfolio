@@ -13,18 +13,31 @@ function initHomeWorks() {
             data.works.slice(0, 4).forEach(work => {
                 const workItem = document.createElement('section');
                 workItem.classList.add('work-item');
+
+                const projectHref = `#single-project/${encodeURIComponent(work.id)}`;
+
                 workItem.innerHTML = `
                     <div class="work-image">
                         <img src="${work.image}" alt="${work.title}">
                     </div>
+
                     <div class="work-content">
-                        <hr>
-                        <span>${work.number}</span>
-                        <h3>${work.title}</h3>
-                        <p>${work.description}</p>
-                        <a href="#single_product/${work.id}"><img src="${work.direction}" alt="arrow"></a>
+                        <hr />
+                        <div class="work-content-row">
+                            <div class="information">
+                                <span class="work-number">${work.number}</span>
+                                <h3 class="work-title">${work.title}</h3>
+                                <p class="work-description">${work.description}</p>
+                            </div>
+                            <div class="work-direction">
+                                <a href="${projectHref}" aria-label="Open ${work.title}">
+                                    <img src="./images/icons/arrow-right.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 `;
+
                 worksSection.appendChild(workItem);
             });
 

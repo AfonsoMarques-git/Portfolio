@@ -3,11 +3,21 @@ const routes = {
     about: './pages/about.html',
     contact: './pages/contact.html',
     portfolio: './pages/portfolio.html',
-    'single-project': './pages/single-project.html'
+    'single-project': './pages/single-project.html',
+    '404': './pages/404.html'
+};
+
+const pageTitles = {
+    home: 'My Portfolio - Home Page',
+    about: 'My Portfolio - About Me',
+    contact: 'My Portfolio - Contacts',
+    portfolio: 'My Portfolio - Portfolio',
+    'single-project': 'My Portfolio',
+    '404': 'My Portfolio - Page Not Found'
 };
 
 function normalizePageKey(page) {
-    if (page === 'single_product') return 'single-project'; // backward compatibility
+    if (page === 'single_product') return 'single-project';
     return page;
 }
 
@@ -34,6 +44,8 @@ function navigateTo(page, slug = null) {
 
             // Keep Portfolio active when viewing a single project
             updateActiveNav(normalizedPage === 'single-project' ? 'portfolio' : normalizedPage);
+
+            document.title = pageTitles[normalizedPage] || 'My Portfolio';
 
             initPageScripts(normalizedPage, slug);
             container.style.opacity = '1';
@@ -79,7 +91,7 @@ function handleRouting() {
     const page = normalizePageKey(rawPage);
 
     if (!routes[page]) {
-        navigateTo('home');
+        navigateTo('404');
         return;
     }
 

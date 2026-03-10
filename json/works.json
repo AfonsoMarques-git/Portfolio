@@ -5,18 +5,20 @@
             "number": "01",
             "title": "Hotel Manager",
             "description": "A comprehensive hotel management dashboard enabling real-time room reservation handling, occupancy tracking, and statistical analysis for efficient operational oversight",
-            "image": "/images/works/placeholder.png",
+            "image": "/images/works/hotel_manager.png",
             "direction": "/images/icons/arrow-right.svg",
-            "link": "/pages/single-project.html"
+            "link": "/pages/single-project.html",
+            "projectLink": "https://hotelmanager2025.netlify.app/"
         },
         {
             "id": "work2",
             "number": "02",
             "title": "Technology Week Website",
             "description": "A dynamic Technology Week website featuring event schedules, speaker profiles, workshop sign-ups, live-streamed sessions, and curated resources to showcase innovations, drive engagement, and facilitate networking among attendees.",
-            "image": "/images/works/placeholder.png",
+            "image": "/images/works/tech_week.png",
             "direction": "/images/icons/arrow-right.svg",
-            "link": "/pages/single-project.html"
+            "link": "/pages/single-project.html",
+            "projectLink": "https://github.com/AfonsoMarques-git/TechWeek.git"
         }
     ]
 }

@@ -19,99 +19,71 @@
 </div>
 
 <div class="about-section">
-    <div class="personal-photo">
-        <div class="background" aria-hidden="true">
-            <span class="ball"></span>
-            <span class="ball"></span>
-            <span class="ball"></span>
-            <span class="ball"></span>
-            <span class="ball"></span>
-            <span class="ball"></span>
-            <span class="ball"></span>
-            <span class="ball"></span>
-        </div>
-        <script>
-            (() => {
-                const photo = document.querySelector('.personal-photo');
-                if (!photo) return;
-
-                let leaveTimer;
-                photo.addEventListener('mouseenter', () => {
-                    clearTimeout(leaveTimer);
-                    photo.classList.remove('is-leaving');
-                });
-
-                photo.addEventListener('mouseleave', () => {
-                    photo.classList.add('is-leaving');
-                    clearTimeout(leaveTimer);
-                    leaveTimer = setTimeout(() => {
-                        photo.classList.remove('is-leaving');
-                    }, 1000);
-                });
-            })();
-        </script>
-        <img src="./images/me2.png" style="transform: rotateY(180deg);" alt="Personal Photo">
-    </div>
     <div class="personal-information">
-        <div class="text">
-            <p>I'm passionate about web development, and I love creating engaging, user-friendly websites. Turning ideas
-                into real projects and bringing digital experiences to life is what motivates me every day.</p>
+        <div class="left-column">
+            <div class="text">
+                <p>I'm passionate about web development, and I love creating engaging, user-friendly websites. Turning
+                    ideas
+                    into real projects and bringing digital experiences to life is what motivates me every day.</p>
 
-            <p>When I'm not coding, you can find me exploring new technologies, improving my programming skills, or
-                working on personal projects. I enjoy learning something new, staying active, and spending quality time
-                with friends, always looking for opportunities to grow both personally and professionally.</p>
+                <p>When I'm not coding, you can find me exploring new technologies, improving my programming skills, or
+                    working on personal projects. I enjoy learning something new, staying active, and spending quality
+                    time
+                    with friends, always looking for opportunities to grow both personally and professionally.</p>
 
-            <p>Thank you for taking the time to learn a little about me. Please don't hesitate to get in touch — I'm
-                always open to meeting new people and collaborating on exciting ideas.</p>
-        </div>
-        <div class="cards">
-            <div class="about-card">
-                <div class="icon">
-                    <img src="./images/icons/code.svg" alt="Languages">
-                </div>
-                <div class="card-text">
-                    <h2>Languages</h2>
-                    <p>Multiple languages in web developing</p>
-                </div>
-            </div>
-            <div class="about-card">
-                <div class="icon">
-                    <img src="./images/icons/education.svg" alt="Education">
-                </div>
-                <div class="card-text">
-                    <h2>Education</h2>
-                    <p>IT Management and Programming</p>
-                </div>
-            </div>
-            <div class="about-card">
-                <div class="icon">
-                    <img src="./images/icons/projects.svg" alt="Projects">
-                </div>
-                <div class="card-text">
-                    <h2>Projects</h2>
-                    <p>Built more than 5 projects</p>
-                </div>
+                <p>Thank you for taking the time to learn a little about me. Please don't hesitate to get in touch — I'm
+                    always open to meeting new people and collaborating on exciting ideas.</p>
             </div>
         </div>
-        <div class="tools-section">
-            <div class="title">
-                <p>Some tools i use</p>
+        <div class="right-column">
+            <div class="cards">
+                <div class="about-card">
+                    <div class="icon">
+                        <img src="./images/icons/code.svg" alt="Languages">
+                    </div>
+                    <div class="card-text">
+                        <h2>Languages</h2>
+                        <p>Multiple languages in web developing</p>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <div class="icon">
+                        <img src="./images/icons/education.svg" alt="Education">
+                    </div>
+                    <div class="card-text">
+                        <h2>Education</h2>
+                        <p>IT Management and Programming</p>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <div class="icon">
+                        <img src="./images/icons/projects.svg" alt="Projects">
+                    </div>
+                    <div class="card-text">
+                        <h2>Projects</h2>
+                        <p>Built more than 5 projects</p>
+                    </div>
+                </div>
             </div>
-            <div class="tools">
-                <div class="tool">
-                    <img src="./images/icons/figma.svg" alt="Figma">
+            <div class="tools-section">
+                <div class="title">
+                    <p>Some tools i use</p>
                 </div>
-                <div class="tool">
-                    <img src="./images/icons/vs-code.svg" alt="VS Code">
-                </div>
-                <div class="tool">
-                    <img src="./images/icons/git.svg" alt="Git">
-                </div>
-                <div class="tool">
-                    <img src="./images/icons/wordpress.svg" alt="Wordpress">
+                <div class="tools">
+                    <div class="tool">
+                        <img src="./images/icons/figma.svg" alt="Figma">
+                    </div>
+                    <div class="tool">
+                        <img src="./images/icons/vs-code.svg" alt="VS Code">
+                    </div>
+                    <div class="tool">
+                        <img src="./images/icons/git.svg" alt="Git">
+                    </div>
+                    <div class="tool">
+                        <img src="./images/icons/wordpress.svg" alt="Wordpress">
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="tools-languages"></div>
     </div>
 </div>

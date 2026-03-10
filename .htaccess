@@ -1,7 +1,15 @@
 Options -MultiViews
 DirectoryIndex index.html
+ErrorDocument 404 /404.html
 
 RewriteEngine On
+
+# Slug correction: redirect page files to their hash-based routes
+RewriteRule ^pages/home\.html$            /\#home             [R=302,L,NE]
+RewriteRule ^pages/about\.html$           /\#about            [R=302,L,NE]
+RewriteRule ^pages/contact\.html$         /\#contact          [R=302,L,NE]
+RewriteRule ^pages/portfolio\.html$       /\#portfolio        [R=302,L,NE]
+RewriteRule ^pages/single-project\.html$  /\#single-project   [R=302,L,NE]
 
 # Redirect every .html request to /index.html, except /index.html itself
 RewriteCond %{REQUEST_URI} !^/index\.html$ [NC]

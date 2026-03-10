@@ -47,26 +47,20 @@
     }
 }
 
-.hero-section>.hero-section-title>.hero-section-icon {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.hero-section>.hero-section-title>.hero-section-icon img {
-    height: 90px;
-    width: auto;
-    display: block;
-}
-
+.hero-section>.hero-section-title>.hero-section-icon,
 .hero-section>.hero-section-title>a>.hero-section-icon {
     display: inline-block;
     vertical-align: middle;
 }
 
+.hero-section>.hero-section-title>.hero-section-icon img,
 .hero-section>.hero-section-title>a>.hero-section-icon img {
     height: 90px;
     width: auto;
     display: block;
+}
+
+.hero-section>.hero-section-title>a>.hero-section-icon img {
     transition: transform 0.3s ease;
 }
 
@@ -76,11 +70,19 @@
 
 /* Hero Section End */
 
+
 /* Works Section */
 .works-section {
+    --work-image-width: 800px;
+    /* change this */
+    --work-image-height: auto;
+    /* change this */
+    --work-gap: 70px;
+
     padding-bottom: 80px;
     display: flex;
     flex-direction: column;
+    gap: 100px;
 }
 
 .works-section.home-works-section {
@@ -91,17 +93,14 @@
 
 .works-section.home-works-section .work-item {
     flex-direction: row;
-}
-
-.works-section.home-works-section .work-image,
-.works-section.home-works-section .work-content {
-    width: 50%;
+    gap: var(--work-gap);
 }
 
 .works-section section {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: var(--work-gap);
 }
 
 .work-item {
@@ -113,35 +112,105 @@
     animation: fadeInLeft 0.8s ease forwards;
 }
 
-.works-section section img {
-    height: auto;
-    object-fit: cover;
-}
-
 .works-section section>div {
-    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.works-section>.work-content {
-    width: 50%;
-}
-
-.work-image {
-    width: 50%;
+/* fixed-size image column */
+.works-section section>.work-image {
+    width: var(--work-image-width);
+    min-width: var(--work-image-width);
+    flex: 0 0 var(--work-image-width);
+    height: var(--work-image-height);
 }
 
 .work-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     display: block;
 }
 
-.works-section.home-works-section .work-image img {
+/* flexible content column */
+.works-section section>.work-content {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.work-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.work-content hr {
     width: 100%;
+    margin-bottom: 20px;
+}
+
+/* JS structure support */
+.work-content-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    height: 100%;
+}
+
+.information {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.work-number {
+    display: block;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #7a7a7a;
+    opacity: 0.9;
+    margin-bottom: 6px;
+}
+
+.work-title {
+    font-size: 2.9em;
+    font-weight: 500;
+    margin: 0 0 24px 0;
+    text-transform: uppercase;
+}
+
+.work-description {
+    font-size: 1.3em;
+    line-height: 1.6;
+    max-width: 70%;
+    margin: 0;
+}
+
+/* Arrow: bottom-aligned on normal styling */
+.work-direction {
+    margin-left: 0;
+    align-self: flex-start;
+    flex: 0 0 auto;
+    padding-top: 50px;
+}
+
+.work-direction a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-direction img {
+    width: 85px;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.work-direction img:hover {
+    transform: translateX(3px);
 }
 
 .works-section section:nth-child(1) {
@@ -160,65 +229,14 @@
     animation-delay: 0.8s;
 }
 
-.work-content {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-.work-content hr {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.work-content span {
-    font-size: 1.1em;
-    font-weight: 700;
-    position: absolute;
-    top: 25px;
-    left: 0px;
-    color: #7a7a7a;
-    opacity: 0.9;
-}
-
-.work-content h3 {
-    font-size: 2.9em;
-    font-weight: 500;
-    margin: 10px 10px 40px 10px;
-    position: relative;
-    padding-left: 24px;
-    text-transform: uppercase;
-}
-
-.work-content p {
-    font-size: 1.3em;
-    line-height: 1.6;
-    padding-left: 30px;
-    max-width: 70%;
-}
-
-.work-content img {
-    width: 100px;
-    height: auto;
-    margin-top: 50px;
-    padding-left: 30px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.work-content img:hover {
-    transform: translateX(3px);
-}
-
 /* Works Section End */
 
+
+/* See More */
 .see-more {
-    display: flex;
-    align-items: center;
-    gap: 50px;
     opacity: 0;
     transform: translateX(-200px);
+    padding: 100px 0 50px 0;
 }
 
 .see-more.visible {
@@ -226,7 +244,15 @@
     animation: fadeInLeft 0.8s ease forwards;
 }
 
-.see-more h1 {
+.see-more a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.see-more a h1 {
     font-size: 8em;
     font-weight: 100;
     text-transform: uppercase;
@@ -239,27 +265,34 @@
     transition: transform 0.3s ease;
 }
 
-.see-more a img:hover {
-    transform: translateX(3px);
+.see-more a:hover img {
+    transform: translateX(7px);
 }
 
+
+/* Media */
 @media (max-width: 1840px) {
-    .work-content img {
+    .work-direction img {
         width: 80px;
-        height: auto;
     }
 
-    .work-content h3 {
+    .work-title {
         font-size: 2.5rem;
     }
 
-    .work-content p {
+    .work-description {
         font-size: 1.1rem;
     }
 }
 
 @media (max-width: 1475px) {
-    .work-item {
+    .works-section {
+        --work-image-width: 100%;
+        --work-image-height: auto;
+    }
+
+    .work-item,
+    .works-section.home-works-section .work-item {
         flex-direction: column;
     }
 
@@ -267,85 +300,103 @@
         width: 100%;
     }
 
-    .works-section.home-works-section .work-item {
+    /* keep arrow to the right of text in this breakpoint */
+    .work-content-row {
         flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 
-    .works-section.home-works-section section>div {
-        width: 50%;
+    .information {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .work-direction {
+        margin-left: auto;
+        align-self: flex-start;
     }
 }
 
 @media (max-width: 1200px) {
-    .see-more h1 {
+    .see-more a h1 {
         font-size: 7rem;
     }
 
     .see-more a img {
         width: 100px;
-        height: auto;
     }
 }
 
 @media (max-width: 990px) {
-    .see-more h1 {
+
+    .works-section section>.work-image,
+    .works-section section>.work-content {
+        width: 100%;
+        min-width: 0;
+        flex: 1 1 auto;
+    }
+
+    .work-direction img {
+        width: 70px;
+    }
+
+    .see-more a h1 {
         font-size: 6rem;
     }
 
     .see-more a img {
         width: 80px;
-        height: auto;
     }
 }
 
 @media (max-width: 770px) {
-    .work-content p {
-        max-width: 85%;
+    .work-description {
+        max-width: 90%;
     }
 
-    .see-more h1 {
+    .see-more a h1 {
         font-size: 5rem;
     }
 
     .see-more a img {
         width: 60px;
-        height: auto;
     }
 }
 
 @media (max-width: 660px) {
-    .see-more h1 {
+    .work-content-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .work-direction {
+        align-self: flex-start;
+        margin-left: 0;
+    }
+
+    .see-more a h1 {
         font-size: 6rem;
     }
 
     .see-more a img {
         display: none;
     }
-
-    .see-more.see-more.visible {
-        gap: 40px;
-    }
-
-    .backtotop img {
-        width: 60px;
-        height: 60px;
-    }
 }
 
 @media (max-width: 575px) {
-    .work-content p {
+    .work-description {
         font-size: 1rem;
         max-width: 100%;
-        padding-left: 30px;
     }
 
-    .see-more h1 {
+    .see-more a h1 {
         font-size: 7rem;
     }
 }
 
 @media (max-width: 500px) {
-    .see-more h1 {
+    .see-more a h1 {
         font-size: 6rem;
     }
 
@@ -355,7 +406,7 @@
 }
 
 @media (max-width: 370px) {
-    .see-more h1 {
+    .see-more a h1 {
         font-size: 5rem;
     }
 }

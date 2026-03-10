@@ -13,7 +13,7 @@ function loadFooter() {
                     <div class="social-media">
                         ${data.socialMedia.map(social => `
                             <a href="${social.url}" target="_blank">
-                                <img src="${social.icon}" alt="${social.platform}">
+                                ${social.platform}
                             </a>
                         `).join('')}
                     </div>

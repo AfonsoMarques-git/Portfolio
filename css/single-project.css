@@ -246,3 +246,37 @@ body {
 .open-project button:hover svg {
     transform: translateY(-50%) rotate(-90deg);
 }
+
+@media (max-width: 1460px) {
+    .product-presentation {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 770px) {
+    .product-info .project-type {
+        font-size: 1.2em;
+    }
+
+    .product-info .project-name {
+        font-size: 2.5em;
+    }
+
+    .product-info .project-description {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 380px) {
+    .product-info .project-type {
+        font-size: 1em;
+    }
+
+    .product-info .project-name {
+        font-size: 2.2em;
+    }
+
+    .product-info .project-description {
+        font-size: 1em;
+    }
+}

@@ -55,6 +55,13 @@ function initSingleProject() {
             if (projectName) projectName.textContent = project.title || "";
             if (projectDescription) projectDescription.textContent = project.description || "";
 
+            const openBtn = root.querySelector('.open-project button');
+            if (openBtn && project.projectLink) {
+                openBtn.onclick = () => window.open(project.projectLink, '_blank');
+            }
+
+            document.title = project.title ? `My Portfolio - ${project.title}` : 'My Portfolio';
+
         })
         .catch(err => {
             console.error("Error loading project data:", err);

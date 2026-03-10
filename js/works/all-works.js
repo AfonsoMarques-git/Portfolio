@@ -4,6 +4,7 @@ function initAllWorks() {
 
     worksSection.classList.remove('home-works-section');
     worksSection.classList.add('all-works-section');
+    worksSection.classList.add('portfolio-works-section');
 
     fetch('./json/works.json')
         .then(response => response.json())
@@ -11,18 +12,18 @@ function initAllWorks() {
             worksSection.innerHTML = '';
             data.works.forEach(work => {
                 const workItem = document.createElement('section');
-                workItem.classList.add('work-item');
+                workItem.classList.add('portfolio-work-item');
                 workItem.innerHTML = `
-                    <div class="work-image">
+                    <div class="portfolio-work-image">
                         <img src="${work.image}" alt="${work.title}">
                     </div>
-                    <div class="work-content">
+                    <div class="portfolio-work-content">
                         <hr>
-                        <span>${work.number}</span>
-                        <h3>${work.title}</h3>
-                        <p>${work.description}</p>
-                        <a href="#single_product/${encodeURIComponent(work.id)}">
-                            <img src="${work.direction}" alt="arrow">
+                        <span class="portfolio-work-number">${work.number}</span>
+                        <h3 class="portfolio-work-title">${work.title}</h3>
+                        <p class="portfolio-work-description">${work.description}</p>
+                        <a class="portfolio-work-link" href="#single_product/${encodeURIComponent(work.id)}">
+                            <img class="portfolio-work-arrow" src="${work.direction}" alt="arrow">
                         </a>
                     </div>
                 `;
@@ -42,5 +43,5 @@ function observeAllWorkItems() {
         });
     }, { threshold: 0.2 });
 
-    document.querySelectorAll('.work-item').forEach(item => observer.observe(item));
+    document.querySelectorAll('.portfolio-work-item').forEach(item => observer.observe(item));
 }
