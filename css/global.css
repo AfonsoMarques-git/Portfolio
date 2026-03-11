@@ -5,8 +5,8 @@
 }
 
 :root {
-    --website-bg-color: #e9d0ff;
-    --text-color: black;
+    --website-bg-color: #d8d8d8;
+    --text-color: #122c4f;
     --main-font: 'Montserrat', sans-serif;
 }
 
@@ -16,6 +16,18 @@ html {
 
 hr {
     border-top: 2px solid var(--text-color);
+}
+
+svg {
+    fill: var(--text-color);
+}
+
+img[src$=".svg"] {
+    filter: brightness(0) saturate(100%) invert(12%) sepia(45%) saturate(2089%) hue-rotate(192deg) brightness(94%) contrast(92%);
+}
+
+.tool img[src$=".svg"] {
+    filter: none;
 }
 
 body {

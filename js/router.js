@@ -3,8 +3,7 @@ const routes = {
     about: './pages/about.html',
     contact: './pages/contact.html',
     portfolio: './pages/portfolio.html',
-    'single-project': './pages/single-project.html',
-    '404': './pages/404.html'
+    'single-project': './pages/single-project.html'
 };
 
 const pageTitles = {
@@ -12,8 +11,7 @@ const pageTitles = {
     about: 'My Portfolio - About Me',
     contact: 'My Portfolio - Contacts',
     portfolio: 'My Portfolio - Portfolio',
-    'single-project': 'My Portfolio',
-    '404': 'My Portfolio - Page Not Found'
+    'single-project': 'My Portfolio'
 };
 
 function normalizePageKey(page) {
@@ -27,7 +25,7 @@ function navigateTo(page, slug = null) {
     const path = routes[normalizedPage];
 
     if (!path) {
-        container.innerHTML = '<p>Page not found</p>';
+        window.location.replace('/404');
         return;
     }
 
@@ -91,7 +89,7 @@ function handleRouting() {
     const page = normalizePageKey(rawPage);
 
     if (!routes[page]) {
-        navigateTo('404');
+        window.location.replace('/404');
         return;
     }
 

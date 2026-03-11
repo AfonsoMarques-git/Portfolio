@@ -163,7 +163,7 @@
     height: 56px;
     overflow: hidden;
     border: none;
-    color: #333333;
+    color: var(--text-color);
     background: none;
     position: relative;
     padding-bottom: 2em;

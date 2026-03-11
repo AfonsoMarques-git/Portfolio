@@ -4,6 +4,9 @@ ErrorDocument 404 /404.html
 
 RewriteEngine On
 
+# Serve 404.html for /404 clean URL
+RewriteRule ^404$ /404.html [L]
+
 # Slug correction: redirect page files to their hash-based routes
 RewriteRule ^pages/home\.html$            /\#home             [R=302,L,NE]
 RewriteRule ^pages/about\.html$           /\#about            [R=302,L,NE]

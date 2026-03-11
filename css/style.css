@@ -246,7 +246,7 @@
 
 .see-more a {
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
     display: flex;
     align-items: center;
     gap: 50px;
